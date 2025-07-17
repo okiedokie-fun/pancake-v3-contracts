@@ -1,4 +1,13 @@
 export const configs = {
+  hyperevm: {
+    WNATIVE: '0x5555555555555555555555555555555555555555',
+    nativeCurrencyLabel: 'HYPE',
+    v2Factory: '0xC072D525422ac4F9133780AB99181CD422f1042b',
+    stableFactory: '0x0000000000000000000000000000000000000000',
+    stableInfo: '0x0000000000000000000000000000000000000000',
+    cake: '0x6647896391e5E2CD4e0f78877de00069b1ec4FE4',
+    smartRouterHelper: '',
+  },
   eth: {
     WNATIVE: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
     nativeCurrencyLabel: 'ETH',

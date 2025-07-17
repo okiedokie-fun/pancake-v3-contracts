@@ -8,6 +8,7 @@ import 'dotenv/config'
 import 'hardhat-tracer'
 import '@nomiclabs/hardhat-etherscan'
 import 'solidity-docgen'
+import { hyperevm } from '@pancakeswap/common/network'
 require('dotenv').config({ path: require('find-config')('.env') })
 
 // const bscTestnet: NetworkUserConfig = {
@@ -60,10 +61,10 @@ const config: HardhatUserConfig = {
         url: bscTestnet.url || '',
       },
     },
-    ...(process.env.KEY_TESTNET && { bscTestnet }),
     ...(process.env.KEY_MAINNET && { bscMainnet }),
     ...(process.env.KEY_GOERLI && { goerli }),
     ...(process.env.KEY_ETH && { eth }),
+    ...(process.env.KEY_MAINNET && { hyperevm }),
     // goerli: goerli,
     // mainnet: bscMainnet,
   },

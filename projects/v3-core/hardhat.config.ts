@@ -6,6 +6,7 @@ import '@typechain/hardhat'
 import 'hardhat-watcher'
 import 'dotenv/config'
 import 'solidity-docgen'
+import { hyperevm } from '@pancakeswap/common/network'
 require('dotenv').config({ path: require('find-config')('.env') })
 
 const LOW_OPTIMIZER_COMPILER_SETTINGS = {
@@ -79,10 +80,10 @@ export default {
     hardhat: {
       allowUnlimitedContractSize: true,
     },
-    ...(process.env.KEY_TESTNET && { bscTestnet }),
     ...(process.env.KEY_MAINNET && { bscMainnet }),
     ...(process.env.KEY_GOERLI && { goerli }),
     ...(process.env.KEY_ETH && { eth }),
+    ...(process.env.KEY_MAINNET && { hyperevm }),
     // mainnet: bscMainnet,
   },
   etherscan: {

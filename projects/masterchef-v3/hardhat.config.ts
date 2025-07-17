@@ -1,6 +1,7 @@
 /* eslint-disable global-require */
 /* eslint-disable @typescript-eslint/no-var-requires */
 import type { HardhatUserConfig, NetworkUserConfig } from "hardhat/types";
+import { hyperevm } from '@pancakeswap/common/network'
 import "@nomiclabs/hardhat-ethers";
 import "@nomiclabs/hardhat-etherscan";
 import "@nomiclabs/hardhat-waffle";
@@ -42,10 +43,10 @@ const config = {
   defaultNetwork: "hardhat",
   networks: {
     hardhat: {},
-    ...(process.env.KEY_TESTNET && { bscTestnet }),
     ...(process.env.KEY_MAINNET && { bscMainnet }),
     ...(process.env.KEY_GOERLI && { goerli }),
     ...(process.env.KEY_ETH && { eth }),
+    ...(process.env.KEY_MAINNET && { hyperevm }),
     // testnet: bscTestnet,
     // mainnet: bscMainnet,
   },
