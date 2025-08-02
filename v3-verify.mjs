@@ -7,6 +7,7 @@ const networks = {
   bscMainnet: 'bscMainnet',
   bscTestnet: 'bscTestnet',
   hardhat: 'hardhat',
+  hyperevm: 'hyperevm',
 }
 
 let network = process.env.NETWORK
@@ -21,8 +22,8 @@ await $`yarn workspace @pancakeswap/v3-periphery run hardhat run scripts/verify.
 
 await $`yarn workspace @pancakeswap/smart-router run hardhat run scripts/verify.ts --network ${network}`
 
-await $`yarn workspace @pancakeswap/masterchef-v3 run hardhat run scripts/verify.ts --network ${network}`
+// await $`yarn workspace @pancakeswap/masterchef-v3 run hardhat run scripts/verify.ts --network ${network}`
 
-await $`yarn workspace @pancakeswap/v3-lm-pool run hardhat run scripts/verify.ts --network ${network}`
+// await $`yarn workspace @pancakeswap/v3-lm-pool run hardhat run scripts/verify.ts --network ${network}`
 
 console.log(chalk.blue('Done!'))

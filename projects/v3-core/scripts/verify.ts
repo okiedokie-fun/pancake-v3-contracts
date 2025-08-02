@@ -1,5 +1,6 @@
 import { verifyContract } from '@pancakeswap/common/verify'
 import { sleep } from '@pancakeswap/common/sleep'
+import { network } from 'hardhat'
 
 async function main() {
   const networkName = network.name
