@@ -5,3 +5,9 @@ export const hyperevm: NetworkUserConfig = {
   chainId: 999,
   accounts: [process.env.KEY_MAINNET!],
 }
+
+export const xlayer: NetworkUserConfig = {
+  url: 'https://xlayerrpc.okx.com',
+  chainId: 196,
+  accounts: [process.env.KEY_XLAYER!],
+}

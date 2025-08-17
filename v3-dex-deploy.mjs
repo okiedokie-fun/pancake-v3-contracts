@@ -8,6 +8,7 @@ const networks = {
   bscTestnet: 'bscTestnet',
   hardhat: 'hardhat',
   hyperevm: 'hyperevm',
+  xlayer: 'xlayer',
 }
 
 let network = process.env.NETWORK

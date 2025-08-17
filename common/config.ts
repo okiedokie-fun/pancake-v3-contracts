@@ -1,4 +1,13 @@
 export const configs = {
+  xlayer: {
+    WNATIVE: '0xe538905cf8410324e03A5A23C1c177a474D59b2b',
+    nativeCurrencyLabel: 'OKB',
+    v2Factory: '0xF1cBfB1b12408dEDbA6Dcd7BB57730bAef6584fB',
+    stableFactory: '0x0000000000000000000000000000000000000000',
+    stableInfo: '0x0000000000000000000000000000000000000000',
+    cake: '0x6647896391e5E2CD4e0f78877de00069b1ec4FE4',
+    smartRouterHelper: '',
+  },
   hyperevm: {
     WNATIVE: '0x5555555555555555555555555555555555555555',
     nativeCurrencyLabel: 'HYPE',
