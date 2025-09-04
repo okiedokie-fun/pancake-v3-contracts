@@ -10,7 +10,7 @@ import '@nomiclabs/hardhat-etherscan'
 import 'solidity-docgen'
 import { hyperevm, xlayer } from '@pancakeswap/common/network'
 require('dotenv').config({ path: require('find-config')('.env') })
-
+import '@okxweb3/hardhat-explorer-verify'
 // const bscTestnet: NetworkUserConfig = {
 //   url: 'https://rpc.ankr.com/bsc_testnet_chapel',
 //   chainId: 97,
@@ -71,6 +71,9 @@ const config: HardhatUserConfig = {
   },
   etherscan: {
     apiKey: process.env.ETHERSCAN_API_KEY || '',
+  },
+  okxweb3explorer: {
+    apiKey: 'f5cea836-4216-42b3-a8cd-bff35d4bd781',
   },
   solidity: {
     compilers: [
